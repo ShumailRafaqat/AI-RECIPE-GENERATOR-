@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title>RecipeGenie - AI Recipe Generator</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to <span class="brand-name">RecipeGenie</span> ✨</h1>
+    </header>
+    <main class="container">
+      <section>
+        <form id="recipe-form">
+          <input
+            type="text"
+            name="enter-recipe-topic"
+            placeholder="What recipe would you like to make?"
+            autofocus
+            required
+            class="instructions"
+            id="user-instructions"
+          />
+          <input
+            type="number"
+            name="servings"
+            placeholder="Enter servings"
+            class="servings-input"
+            id="servings-input"
+            required
+          />
+          <input
+            type="number"
+            name="cooking-time"
+            placeholder="Enter cooking time (minutes)"
+            class="time-input"
+            id="time-input"
+            required
+          />
+          <input type="submit" value="Generate Recipe" class="submit-button" />
+        </form>
+        <div class="hints">
+          <span>
+            Enter ingredients, or anything you'd like to cook!
+          </span>
+        </div>
+      </section>
+
+      <section>
+        <div class="recipe hidden" id="recipe"></div>
+        <button id="download-button" class="hidden">Download Recipe</button>
+      </section>
+    </main>
+    <footer>
+      <p class="footer-text">
+        <footer>
+          <p>Made with ❤️ by the Awesome Devs Team</p>
+        </footer>
+        
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
